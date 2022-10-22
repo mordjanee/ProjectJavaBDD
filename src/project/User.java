@@ -33,6 +33,7 @@ public class User extends JFrame{
         
         JFrame frame = new JFrame();
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
     
@@ -48,7 +49,7 @@ public class User extends JFrame{
     
     public User(){
         
-        JPanel panel = new JPanel(new GridLayout(4, 1));
+        JPanel panel = new JPanel(new GridLayout(5, 1));
         
         panel.add(lblAveragePrice = new JLabel("Max Price"));
         panel.add(txtAveragePrice = new JTextField());
@@ -153,7 +154,7 @@ public class User extends JFrame{
                         QueryString += " Pool = '1' ";
                     }
                     if(chkBreakfast.isSelected()){
-                        QueryString += " Breakfast = '0' ";
+                        QueryString += " Breakfast = '1' ";
                     }
                     if(chkPark.isSelected()){
                         QueryString += " Parking = '1' ";
@@ -166,7 +167,7 @@ public class User extends JFrame{
                     QueryString += " Climate = '" + chkClimate.getSelectedItem().toString() + "' "; 
                     QueryString += " Stars = '" + chkStars.getSelectedItem().toString() + "' "; 
                     
-                    QueryString += " AveragePrice >= '" + Integer.parseInt(txtAveragePrice.getText()) + "' ";
+                    QueryString += " AveragePrice <= " + Integer.parseInt(txtAveragePrice.getText());
                     
                     QueryString = QueryString.replaceAll("  ", " and ");
                     System.out.println(QueryString);
@@ -180,7 +181,6 @@ public class User extends JFrame{
                     while(rset.next()){
                         System.out.println(rset.getString("City") +
                                 ": " + rset.getString("AveragePrice")+
-                                ": " + rset.getString("Availablity") +
                                 ": " + rset.getString("Climate") +
                                 ": " + rset.getString("Pool") +
                                 ": " + rset.getString("Breakfast")+

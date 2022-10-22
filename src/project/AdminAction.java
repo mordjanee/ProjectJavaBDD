@@ -22,6 +22,7 @@ public class AdminAction extends JFrame{
         
         JFrame frame = new JFrame();
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
     

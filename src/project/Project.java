@@ -52,6 +52,7 @@ public class Project extends Application {
             public void handle(ActionEvent event) {
                 JFrame frame = new Admin();
                 frame.pack();
+                frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
             }
         });
@@ -61,6 +62,7 @@ public class Project extends Application {
             public void handle(ActionEvent event) {
                 JFrame frame = new User();
                 frame.pack();
+                frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
             }
         });
