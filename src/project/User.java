@@ -7,6 +7,7 @@ package project;
 
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -54,13 +55,20 @@ public class User extends JFrame{
         
         JPanel panel = new JPanel(new GridLayout(3, 1));
         
-        panel.add(lblAveragePrice = new JLabel("Max Price"));
+        lblAveragePrice = new JLabel("Max Price");
+        lblAveragePrice.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
+        lblAveragePrice.setHorizontalAlignment(JLabel.CENTER);
+        panel.add(lblAveragePrice);
+        
         panel.add(txtAveragePrice = new JTextField());
         panel.add(chkCity = new JComboBox());
         chkCity.setRenderer(new MyComboBoxRenderer("CITY"));
         chkCity.setSelectedIndex(-1);
+        chkCity.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
+        
         
         panel.add(chkClimate = new JComboBox());
+        chkClimate.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
         chkClimate.addItem("Tropical");
         chkClimate.addItem("Temperate");
         chkClimate.addItem("Polar");
@@ -68,12 +76,24 @@ public class User extends JFrame{
         chkClimate.setSelectedIndex(-1);
         
         panel.add(chkPool = new JCheckBox("Pool"));
+        chkPool.setHorizontalAlignment(JCheckBox.CENTER);
+        chkPool.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
+        
         panel.add(chkBreakfast = new JCheckBox("Breakfast"));
+        chkBreakfast.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
+        chkBreakfast.setHorizontalAlignment(JCheckBox.CENTER);
+        
         panel.add(chkPark = new JCheckBox("Parking"));
+        chkPark.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
+        chkPark.setHorizontalAlignment(JCheckBox.CENTER);
+        
         panel.add(chkWifi = new JCheckBox("Wifi"));
+        chkWifi.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
+        chkWifi.setHorizontalAlignment(JCheckBox.CENTER);
         
         
         panel.add(chkStars = new JComboBox());
+        chkStars.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
         chkStars.addItem("1");
         chkStars.addItem("2");
         chkStars.addItem("3");
@@ -84,8 +104,11 @@ public class User extends JFrame{
         
         
         panel.add(btnConnect = new JButton("Connect"));
+        btnConnect.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
         panel.add(btnAll = new JButton("All destinations"));
+        btnAll.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
         panel.add(btnFilter = new JButton("Filter"));
+        btnFilter.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
         
         panel.add(img = new JLabel(new ImageIcon("D:\\Semestre_5\\Java\\Project\\hotel.jpg")));
         panel.add(img = new JLabel(new ImageIcon("D:\\Semestre_5\\Java\\Project\\hotel1.jpg")));
@@ -94,6 +117,7 @@ public class User extends JFrame{
         panel.add(img = new JLabel(new ImageIcon("D:\\Semestre_5\\Java\\Project\\hotel4.jpg")));
         
         btnExit = new JButton("Exit");
+        btnExit.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
         btnExit.setBackground(Color.BLACK);
         btnExit.setForeground(Color.WHITE);
         panel.add(btnExit);
