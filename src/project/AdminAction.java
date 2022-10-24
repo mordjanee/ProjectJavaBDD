@@ -22,6 +22,7 @@ public class AdminAction extends JFrame{
         
         JFrame frame = new JFrame();
         frame.pack();
+        frame.setTitle("MANAGE DATABASE");
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
@@ -134,7 +135,7 @@ public class AdminAction extends JFrame{
                 
                 try{
                     String queryString = "Insert into Destination " + "(City, AveragePrice, Availablity, Climate, Pool, Breakfast, Parking, Wifi, Stars)" + "values " +
-                            "(''"+City+"','"+AveragePrice+"','"+Climate+"','"+Pool+"','"+Breakfast+"','"+Parking+"','"+Wifi+"','"+Stars+"')";
+                            "('"+City+"','"+AveragePrice+"','"+Climate+"','"+Pool+"','"+Breakfast+"','"+Parking+"','"+Wifi+"','"+Stars+"')";
                     stmt.execute(queryString);
                     System.out.println("Destination Added");
                     

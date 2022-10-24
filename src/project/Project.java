@@ -5,12 +5,14 @@
  */
 package project;
 
+import java.awt.Color;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javax.swing.JFrame;
@@ -43,7 +45,7 @@ public class Project extends Application {
 
         Scene scene = new Scene(root, 300, 250);
 
-        primaryStage.setTitle("Application");
+        primaryStage.setTitle("DESTINATION FILTER");
         primaryStage.setScene(scene);
         primaryStage.show();
         
@@ -51,6 +53,7 @@ public class Project extends Application {
             @Override
             public void handle(ActionEvent event) {
                 JFrame frame = new Admin();
+                frame.setTitle("ADMIN CONNECTION");
                 frame.pack();
                 frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
@@ -61,6 +64,7 @@ public class Project extends Application {
             @Override
             public void handle(ActionEvent event) {
                 JFrame frame = new User();
+                frame.setTitle("DESTINATION FILTER");
                 frame.pack();
                 frame.setLocationRelativeTo(null);
                 frame.setVisible(true);

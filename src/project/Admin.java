@@ -24,6 +24,7 @@ public class Admin extends JFrame{
         
         JFrame frame = new JFrame();
         frame.pack();
+        frame.setTitle("ADMIN CONNECTION");
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         
@@ -89,7 +90,9 @@ public class Admin extends JFrame{
                 }
                 
                 if(reg==true){
+                    JOptionPane.showMessageDialog(null, "SUCCESSFUL CONNECTION");
                     JFrame frame = new AdminAction();
+                    frame.setTitle("MANAGE DATABASE");
                     frame.pack();
                     frame.setVisible(true);
                 }

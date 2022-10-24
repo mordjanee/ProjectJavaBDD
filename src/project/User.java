@@ -5,6 +5,7 @@
  */
 package project;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -22,6 +23,7 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.EventHandler;
+import javafx.scene.layout.Background;
 
 /**
  *
@@ -33,6 +35,7 @@ public class User extends JFrame{
         
         JFrame frame = new JFrame();
         frame.pack();
+        frame.setTitle("DESTINATION FILTER");
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
@@ -40,7 +43,7 @@ public class User extends JFrame{
     private Statement stmt;
     
     
-    JLabel lblAveragePrice;
+    JLabel lblAveragePrice, img, img1, img2;
     JTextField txtAveragePrice;
     JComboBox chkCity, chkClimate, chkStars;
     JCheckBox chkPool, chkBreakfast, chkPark, chkWifi;
@@ -49,7 +52,7 @@ public class User extends JFrame{
     
     public User(){
         
-        JPanel panel = new JPanel(new GridLayout(5, 1));
+        JPanel panel = new JPanel(new GridLayout(3, 1));
         
         panel.add(lblAveragePrice = new JLabel("Max Price"));
         panel.add(txtAveragePrice = new JTextField());
@@ -83,7 +86,20 @@ public class User extends JFrame{
         panel.add(btnConnect = new JButton("Connect"));
         panel.add(btnAll = new JButton("All destinations"));
         panel.add(btnFilter = new JButton("Filter"));
-        panel.add(btnExit = new JButton("Exit"));
+        
+        panel.add(img = new JLabel(new ImageIcon("D:\\Semestre_5\\Java\\Project\\hotel.jpg")));
+        panel.add(img = new JLabel(new ImageIcon("D:\\Semestre_5\\Java\\Project\\hotel1.jpg")));
+        panel.add(img = new JLabel(new ImageIcon("D:\\Semestre_5\\Java\\Project\\hotel2.jpg")));
+        panel.add(img = new JLabel(new ImageIcon("D:\\Semestre_5\\Java\\Project\\hotel3.jpg")));
+        panel.add(img = new JLabel(new ImageIcon("D:\\Semestre_5\\Java\\Project\\hotel4.jpg")));
+        
+        btnExit = new JButton("Exit");
+        btnExit.setBackground(Color.BLACK);
+        btnExit.setForeground(Color.WHITE);
+        panel.add(btnExit);
+                
+               
+        
         
         add(panel);
         
